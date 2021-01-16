@@ -1,5 +1,116 @@
 @import "reset.scss";
-@import "greed.scss";
+@import "grid.scss";
+
+$col8: 906px;
+$col4: 460px;
+
+
+// $col4: 1366px-460px;
+
+
+
+
+
+
+.container{
+    & .row{
+        width: 100%;
+    }
+    & >div{
+        width: 100%;
+    }  
+}
+.header_img {
+    background-image: url(/img/rectangle1.png);
+    background-repeat: no-repeat;
+    background-position: left top ;
+    background-size: cover;
+    
+    }
+.menu_block{
+        height: auto;
+        background-color: #f3f3f3;
+    }
+// mobile_menu
+.nav_mobile_menu{
+    display: block;
+    width: 33px;
+    height: 29px;
+    position: relative;
+    & span{
+        height: 3px;
+        background-color: #3a4245;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    & span:nth-child(1){
+        top: 3px;
+    }
+    & span:nth-child(2){
+        top:13px;
+    }
+    & span:last-child{
+        bottom:3px;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+.title{
+    color: #262f32;
+    text-align: left;
+    letter-spacing: 1px;
+    & span{
+        font-weight: 700;
+        display: block;
+    }
+}
+.container .title__thin{
+    font-weight: 300;
+}
+
+
+.section__text{
+    
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: #262f32;
+    margin-bottom: 40px;
+}
+.section__text:last-child{
+    margin-bottom: 0;
+}
+
+
+
+
+// main
+
+.section__our_services{
+    // background-color: #1e92af;
+    background-image: url(/img/rectangle1copy2.png);
+}
+.section__services_block{
+    background-color: #1e92afbe;
+}
+.section__service{
+        color: #fff;
+        .section__servise_title{
+            letter-spacing: 1px;
+            font-weight: 300;
+            span{
+                font-weight: 900;
+            }
+        };
+        p{
+            letter-spacing: 0px;
+        }
+        
+    }
+
 
 
 
@@ -15,6 +126,38 @@
 /* tablet */
 @media(min-width:768px){
 
+    %title-font-size-tablet{
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    .menu_block{
+        padding: 26px;
+    }
+    .title{
+        @extend %title-font-size-tablet;
+    }
+    .container .title{
+        margin: 40px 0 24px 0;
+    }
+    .section__text{
+        font-size: 16px;
+    }
+    .section__services_block{
+        padding: 49px 32px 50px 32px;
+    }
+    .section__service{
+        margin-bottom: 30px;
+        
+        .section__servise_title{
+            margin-bottom: 22px;
+            @extend %title-font-size-tablet;
+        };
+        p{
+            line-height: 24px;
+            font-size: 12px;
+        }
+    }
 
 }
 
@@ -29,7 +172,38 @@
 /* laptop */
 @media(min-width:992px){
 
+    %title-font-size-laptop{
+        font-size: 40px;
+        line-height: 58px;
+    }
 
+    .menu_block{
+        padding: 55px;
+    }
+    .title{
+        @extend %title-font-size-laptop;
+    }
+    .container .title{
+        margin: 40px 0 35px 0;
+    }
+    .section__text{
+        font-size: 18px;
+    }
+    .section__services_block{
+         padding: 70px 55px 70px 55px;
+    }
+    .section__service{
+       
+        .section__servise_title{
+            @extend %title-font-size-laptop;
+            margin-bottom: 34px;
+            
+        };
+        p{
+            line-height: 28px;
+            font-size: 16px;
+        }
+    }
 
 }
 
@@ -59,5 +233,67 @@
 
 /* mobile */
 @media(max-width:767px){
+    %title-font-size-mobile{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    %text-font-size-mobile{
+        font-size: 11px;
+    }
+
+        .header .row{
+            flex-direction: column-reverse;
+        }
+
+        .nav_mobile_menu{
+            width: 15px;
+            height: 15px;
+        & span{
+            height: 1px;
+        }
+        & span:nth-child(1){
+            top: 3px;
+        }
+        & span:nth-child(2){
+            top:7px;
+        }
+        & span:last-child{
+            bottom:3px;
+        }
+    }
+    .header_img{
+        height: 400px;
+    }
+
+    .menu_block{
+        padding: 26px;
+    }
+    .title{
+        @extend %title-font-size-mobile;
+    }
+    .container .title{
+        margin: 30px 0 30px 0;
+    }
+    .section__text{
+        @extend %text-font-size-mobile;
+        margin-bottom: 28px;
+    }
+    .section__services_block{
+        padding: 32px 26px 32px 26px;
+    }
+    .section__service{
+        margin-bottom: 24px;
+        
+        
+        .section__servise_title{
+            @extend %title-font-size-mobile;
+            margin-bottom: 14px;
+        };
+        p{
+            @extend %text-font-size-mobile;
+            line-height: 20px;
+        }
+    }
+
 
 }
