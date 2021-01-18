@@ -1,12 +1,17 @@
 @import "reset.scss";
 @import "grid.scss";
 
-$col8: 906px;
-$col4: 460px;
 
 
-// $col4: 1366px-460px;
-
+@mixin button( $color){
+    border: 1px solid $color;
+    color: $color;
+    border-radius: 11px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    background-color: transparent;
+    margin-top: 55px;
+}
 
 
 
@@ -89,12 +94,15 @@ $col4: 460px;
 
 // main
 
+// .section__our_services{
+//     // background-color: #1e92af;
+    
+//     background-size: cover;
+// }
 .section__our_services{
-    // background-color: #1e92af;
-    background-image: url(/img/rectangle1copy2.png);
-}
-.section__services_block{
     background-color: #1e92afbe;
+    position: relative;
+    display: block;
 }
 .section__service{
         color: #fff;
@@ -104,12 +112,60 @@ $col4: 460px;
             span{
                 font-weight: 900;
             }
+            
         };
         p{
             letter-spacing: 0px;
         }
         
     }
+    .section__img_bg{
+                background-image: url(/img/rectangle1copy2.png);
+                background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            }
+    
+
+    
+    .light{
+        color: rgb(0, 0, 0);
+    }
+    .section_blue>div{
+        background-color: #fff4d2a1;
+        position: relative;
+        display: block;
+        .section_blue_img_bg{
+            background-image: url(/img/rectangle1copy2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+        }
+
+    }
+    .section_blue>div:nth-child(2){
+        background-color: #162633ad;
+        .section_blue_img_bg{
+            background-image: url(/img/layer21.png);
+        }
+    }
+    .section__service button{
+        @include button(#000)
+    }
+    .container .section__service .dark_btn{
+        @include button(#fff)
+    }
+    
 
 
 
@@ -143,8 +199,11 @@ $col4: 460px;
     .section__text{
         font-size: 16px;
     }
+    main .row{
+        flex-direction: column;
+    }
     .section__services_block{
-        padding: 49px 32px 50px 32px;
+        padding: 40px 30px 30px 30px;
     }
     .section__service{
         margin-bottom: 30px;
@@ -157,6 +216,9 @@ $col4: 460px;
             line-height: 24px;
             font-size: 12px;
         }
+    }
+    .section__service button{
+        padding: 8px 30px 12px 30px;
     }
 
 }
@@ -189,8 +251,11 @@ $col4: 460px;
     .section__text{
         font-size: 18px;
     }
+    main .row{
+        flex-direction: row;
+    }
     .section__services_block{
-         padding: 70px 55px 70px 55px;
+        padding: 40px 30px 30px 30px;
     }
     .section__service{
        
@@ -204,6 +269,10 @@ $col4: 460px;
             font-size: 16px;
         }
     }
+    .section__service button{
+        padding: 10px 35px 15px 35px;
+    }
+
 
 }
 
@@ -219,6 +288,13 @@ $col4: 460px;
 /* desktop */
 @media(min-width:1200px){
 
+    .section__services_block{
+         padding: 70px 55px 70px 55px;
+    }
+    .section__service button{
+        padding: 15px 40px 20px 40px;
+        @include button(#000)
+    }
 
 }
 
@@ -278,6 +354,12 @@ $col4: 460px;
         @extend %text-font-size-mobile;
         margin-bottom: 28px;
     }
+
+    // main
+
+    main .row{
+        flex-direction: column;
+    }
     .section__services_block{
         padding: 32px 26px 32px 26px;
     }
@@ -294,6 +376,13 @@ $col4: 460px;
             line-height: 20px;
         }
     }
+
+    .section__service button{
+        padding: 10px 25px 10px 25px;
+        @include button(#000)
+
+    }
+    
 
 
 }
