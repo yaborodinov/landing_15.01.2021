@@ -26,7 +26,7 @@
     }  
 }
 .header_img {
-    background-image: url(/img/rectangle1.png);
+    background-image: url(../img/rectangle1.png);
     background-repeat: no-repeat;
     background-position: left top ;
     background-size: cover;
@@ -117,7 +117,7 @@
         margin-bottom: 0;
     }
 .section__img_bg, .section_img_bg{
-            background-image: url(/img/rectangle1copy2.png);
+            background-image: url(../img/rectangle1copy2.png);
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
@@ -138,7 +138,7 @@
         position: relative;
         display: block;
         .section_img_bg{
-            background-image: url(/img/rectangle1copy2.png);
+            background-image: url(../img/rectangle1copy2.png);
             
         }
 
@@ -146,7 +146,7 @@
     .section_blue>div:nth-child(2){
         background-color: #162633ad;
         .section_img_bg{
-            background-image: url(/img/layer21.png);
+            background-image: url(../img/layer21.png);
         }
     }
     .section__service button{
@@ -173,7 +173,7 @@
         position: relative;
         display: block;
             .section_img_bg{
-            background-image: url(/img/rrectangle2copy.png);
+            background-image: url(../img/rrectangle2copy.png);
             >div>h2:last-child{
                 font-size: 42px;
             }
@@ -186,7 +186,7 @@
             position: relative;
             display: block;
             .section_img_bg{
-                background-image: url(/img/last2.png);
+                background-image: url(../img/last2.png);
                 
             }
         
